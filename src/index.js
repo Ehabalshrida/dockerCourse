@@ -53,7 +53,7 @@ app.get('/', (req, res) => {
 
 app.get('/data', async (req, res) => {
   const products = await redisClient.get('products');
-  res.send(`Hello ${process.env.NODE_ENV}::${products}`);
+  res.send(`Hello ${process.env.NODE_ENV} from AWS::${products}`);
 });
 
 app.listen(PORT, () => console.log(`app is up and running on port: ${PORT}`));
