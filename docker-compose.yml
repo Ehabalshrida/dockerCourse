@@ -5,8 +5,8 @@ services:
       depends_on:
       - mongo
       - redis
-      ports:
-            - ${PORT}:${PORT}
+      # ports:
+      #       - ${PORT}:${PORT} // since we access the service through nginx no need for this 
   # postgres:
   #   image: postgres
   #   restart: always
