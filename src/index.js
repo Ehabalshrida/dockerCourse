@@ -48,7 +48,7 @@ mongoose
 app.get('/', (req, res) => {
   redisClient.set('products', 'products...');
   console.log(`traffic from ${os.hostname}`);
-  res.send(` Hello ${process.env.NODE_ENV} from AWS using docker Hub two times new update`);
+  res.send(` Hello ${process.env.NODE_ENV} using watcher`);
 });
 
 app.get('/data', async (req, res) => {
