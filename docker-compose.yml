@@ -5,6 +5,15 @@ services:
       depends_on:
       - mongo
       - redis
+      deploy:
+        replicas: 4
+        restart_policy:
+          condition: on-failure
+          delay: 5s
+        update_config:
+          parallelism: 2
+          delay: 10s
+
       # ports:
       #       - ${PORT}:${PORT} // since we access the service through nginx no need for this 
   # postgres:
